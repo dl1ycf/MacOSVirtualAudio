@@ -7,9 +7,8 @@ class VACEngine : public IOAudioEngine
     OSDeclareDefaultStructors(VACEngine)
 
 public:
-    virtual void free();                                // standard Method
-    
-    virtual bool initHardware(IOService *provider);     // standard Method
+    virtual void free();
+    virtual bool initHardware(IOService *provider);
     virtual void stop(IOService *provider);
     
     virtual IOAudioStream *createNewAudioStream(IOAudioStreamDirection direction,
@@ -31,15 +30,16 @@ public:
                                          IOAudioStream *audioStream);
     
 private:
-    IOTimerEventSource*     fAudioInterruptSource;
-    SInt16                  *IOBuffer;                  // actually unused, we use the same for input and output
+    IOTimerEventSource*     fAudioInterruptSource;      // Machine used for generating periodic interrupts
+    float                   *IOBuffer;                  // the same for input and output, since no actual hardware
     float                   *CopyBuffer;                // For moving sound data through the cable
     
+    // This is the actual interrupt service routine
     static void             interruptOccured(OSObject* owner, IOTimerEventSource* sender);
     
+    int                     NoSignal;                   // this flag mutes the cable
     SInt32                  ChunkCounter;               // determines actual chunk
     SInt64                  fNextTimeout;               // next time to fire interrupt
     UInt64                  NanosecPerBlock;            // nanosecs that fit into one chunk
-
 };
 

@@ -8,5 +8,4 @@ class VACDevice : public IOAudioDevice
     
     virtual bool initHardware(IOService *provider);
     bool createAudioEngine(const char *name);
-    
 };
