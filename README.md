@@ -83,7 +83,7 @@ b) MacOS with System Integrity Protection (SIP) enabled does not allow unsigned
 drivers. I have an AppleID, and therefore I can sign the kext with a
 MacDeveloper certificate, but this is not enough to get a kext loaded.
 To get a Developer ID valid for kext signing, I need a "real" team with
-a team agent etc., this is to much for me.
+a team agent etc., this is too heavy for me.
 
 So for myself, I chose to dis-able  SIP temporarily when using the driver.
 For this, you have to re-boot while holding Option-R, and when the system
@@ -94,3 +94,14 @@ csrutil disable
 and reboot. Re-enabling SIP goes the same way, but type in "csrutil enable"
 this time. I would not recommend to dis-able SIP permanently for security
 reasons.
+
+Alternatives
+============
+
+It does not feel OK that this only works with SIP disabled. I have recently
+came across a loopback driver which you can buy. Just search the internet
+for the key workds
+
+loopback rogue amoeba
+
+and you will find a product which you can buy for about 100 Dollars.
