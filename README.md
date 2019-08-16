@@ -98,10 +98,13 @@ reasons.
 Alternatives
 ============
 
-It does not feel OK that this only works with SIP disabled. I have recently
+It does not feel OK that this only works with SIP disabled. I  recently
 came across a loopback driver which you can buy. Just search the internet
 for the key workds
 
 loopback rogue amoeba
 
-and you will find a product which you can buy for about 100 Dollars.
+and you will find a product which you can buy for about 100 Dollars. I have
+not bought it and never tried it, but according to the advertisement
+it should be fine for routing audio between HPSDR applications to digimode
+programs.
