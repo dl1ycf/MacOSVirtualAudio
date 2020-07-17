@@ -117,6 +117,7 @@ IOAudioStream *VACEngine::createNewAudioStream(IOAudioStreamDirection direction,
     if (audioStream) {
         if (!audioStream->initWithAudioEngine(this, direction, 0)) {
             audioStream->release();
+            audioStream=NULL;
         } else {
             // Note that the format is completely virtual since we are doing no
             // actual I/O in this "virtual cable" driver. We never leave the internal
