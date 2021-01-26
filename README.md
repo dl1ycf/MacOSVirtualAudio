@@ -1,6 +1,9 @@
 Virtual Audio Cable for MacOS X
 ===============================
 
+See "Note on MacOS BigSur" below!
+----------------------------------
+
 
 This code is derived from the sample code "MyAudioEngine"
 in the book
@@ -65,6 +68,22 @@ option, it reads
 
 OTHER_LDFLAGS = "-isysroot$(DEVELOPER_SDK_DIR)/MacOSX$(MACOSX_DEPLOYMENT_TARGET).sdk"
 
+Note on MacOS "BigSur"
+----------------------
+
+First of all, it still works with MacOS 11.1 "BigSur" (that is, the kext compiled
+under MacOS 10.15 still works under MacOS 11.1), but users have reported that
+compilation fails after upgrade to BigSur.
+
+What works for me is:
+- delete XCode app from your Applications folder
+- get and install XCode version 12.1, (you can get older XCode versions
+  from Apple's Developer site)
+
+After installing a kernel extension in MacOS BigSur, you must "allow" this
+once (e.g. after rebooting) in the "Security" panel within the system preferences.
+When you open it, the "Agree" button is already prepeared.
+
 Install IOKit Drivers
 =====================
 
@@ -85,6 +104,10 @@ MacDeveloper certificate, but this is not enough to get a kext loaded.
 To get a Developer ID valid for kext signing, I need a "real" team with
 a team agent etc., this is too heavy for me.
 
+c) (see above, note on MacOS BigSur) In the most recent version of MacOS,
+you have to agree to loading the kernel extension in the SystemPreferences
+--> Security panel.
+
 So for myself, I chose to dis-able  SIP temporarily when using the driver.
 For this, you have to re-boot while holding Option-R, and when the system
 shows the recovery screen, open a terminal window and type in 
@@ -100,11 +123,12 @@ Alternatives
 
 It does not feel OK that this only works with SIP disabled. I  recently
 came across a loopback driver which you can buy. Just search the internet
-for the key workds
+for the key words
 
 loopback rogue amoeba
 
-and you will find a product which you can buy for about 100 Dollars. I have
+and you will find a product which you can buy for about USD 100. I have
 not bought it and never tried it, but according to the advertisement
 it should be fine for routing audio between HPSDR applications to digimode
-programs.
+programs, and it seems you get some other benefits such as a virtual
+audio patch-panel as well.
