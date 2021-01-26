@@ -121,13 +121,13 @@ reasons.
 Alternatives
 ============
 
-It does not feel OK that this only works with SIP disabled. I  recently
-came across a loopback driver which you can buy. Just search the internet
-for the key words
+I  recently came across a loopback driver which you can buy, and which should
+not require to disable SIP. Just search the internet for the key words
 
 loopback rogue amoeba
 
-and you will find a product which you can buy for about USD 100. I have
+and you will find a product which you can buy for about USD 100 (you
+can evaluate before you pay). I have
 not bought it and never tried it, but according to the advertisement
 it should be fine for routing audio between HPSDR applications to digimode
 programs, and it seems you get some other benefits such as a virtual
