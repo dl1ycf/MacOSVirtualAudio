@@ -5,6 +5,62 @@ See "Note on MacOS BigSur" below!
 ----------------------------------
 
 
+Whats here
+----------
+
+What is deposited here is a folder containing the
+Xcode project, so you should be able to re-compile
+the driver on you Mac if you have Xcode. Furthermore,
+the freshly compiled driver bundle (VACDevice.kext) is
+also present. This is freshly compiled by Xcode on my
+Intel-Mac running MacOS 10.15 "Catalina" and is the
+same you can find somewhere deep in the Xcode folder.
+
+For your convenience both the Xcode folder and the
+driver are additionally available as ZIP files.
+
+Disabling System Integrity Protection (SIP)
+-------------------------------------------
+
+Starting with MacOS 10.11 "El Capitan", Apple introduced
+a very useful security feature that however disables
+loading device drivers from untrusted persons (and I am
+an untrusted person since I do not have the required
+developer status). To disable SIP you have to boot
+into the recovery screen (that means, hold option-R
+while booting the Mac), open a terminal window and issue
+the command
+
+	csrutil disable
+
+(you can re-infore SIP any time with the command "csrutil enable"
+at the same place).
+
+While it is not recommended to permanently switch off SIP, it is
+the only way to use *this* driver. See "Alternatives" at the end
+of this README for a commercial product that can be used without
+disabling SIP.
+
+Howto install
+-------------
+
+If you do not want to recompile the driver, download
+the VACDevice.kext.zip file and un-compress it on your
+desktop. Then, open a terminal window and issue the commands
+
+	cd $HOME/Desktop
+	sudo chown -R root:wheel VACDevice.kext
+	sudo kextload VACDevice.kext
+
+If you have the "Audio Midi Setup" window open, you should see
+that two additional sound devices suddenly appear. If you want
+to make this permanent, drag the VACDevice.kext into the
+/Library/Extensions folder.
+
+
+About the code
+--------------
+
 This code is derived from the sample code "MyAudioEngine"
 in the book
 
@@ -55,25 +111,26 @@ and cables just produce at the output what has been put in at the
 input.
 
 Mac OS Versions
-===============
+---------------
+
+This code has been compiled unter MacOS 10.15 "Catalina" but has also
+been tested in Intel Macs running "BigSur". Loading drivers is even
+more restricted in BigSur:
+After installing a kernel extension in MacOS BigSur, you must "allow" this
+once (e.g. after rebooting) in the "Security" panel within the system preferences.
+When you open it, the "Agree" button is already prepeared.
+
+I cannot guarantee that the driver works for older MacOS versions
+since I cannot test it, but you should be able to compile it on
+fairly old MacOS versions. In fact, the code uses many features
+already marked "deprecated" in MacOS 10.10, so it sooner or later
+reaches its end-of-life.
 
 
-In this XCode project, I chose the "deployment" version as MacOS 10.9,
-so it should run on every version therefrom (until IOKits are removed
-by Apple, the seem to be deprecated now). To get rid of some silly warnings,
-I forced XCode to use the old 10.9 SDK by the "Other Linker Flags" option
-within the "Build settings" panel.
-If you do not have the 10.9 SDK within your XCode app, simply delete this
-option, it reads
+Compilation on MacOS "BigSur"
+------------------------------
 
-OTHER_LDFLAGS = "-isysroot$(DEVELOPER_SDK_DIR)/MacOSX$(MACOSX_DEPLOYMENT_TARGET).sdk"
-
-Note on MacOS "BigSur"
-----------------------
-
-First of all, it still works with MacOS 11.1 "BigSur" (that is, the kext compiled
-under MacOS 10.15 still works under MacOS 11.1), but users have reported that
-compilation fails after upgrade to BigSur.
+Some users have reported that compilation fails after upgrade to BigSur.
 
 What works for me is:
 - delete XCode app from your Applications folder
@@ -84,40 +141,6 @@ After installing a kernel extension in MacOS BigSur, you must "allow" this
 once (e.g. after rebooting) in the "Security" panel within the system preferences.
 When you open it, the "Agree" button is already prepeared.
 
-Install IOKit Drivers
-=====================
-
-IOKit drivers are either installed permanently by putting them into /Library/Extensions,
-are activated and deactivated within the running system using kextload / kextunload.
-However, you have to be aware of two points:
-
-a) the driver must be owned by root. So, if you have moved the product named
-VACDevice.kext to some place, you have to open a terminal window,
-su to root, go to place where VACDevice.kext resides and issue the commands
-
-	chown -R root:wheel VACDevice.kext
-	chmod -R o-w VACDevice.kext
-
-b) MacOS with System Integrity Protection (SIP) enabled does not allow unsigned 
-drivers. I have an AppleID, and therefore I can sign the kext with a
-MacDeveloper certificate, but this is not enough to get a kext loaded.
-To get a Developer ID valid for kext signing, I need a "real" team with
-a team agent etc., this is too heavy for me.
-
-c) (see above, note on MacOS BigSur) In the most recent version of MacOS,
-you have to agree to loading the kernel extension in the SystemPreferences
---> Security panel.
-
-So for myself, I chose to dis-able  SIP temporarily when using the driver.
-For this, you have to re-boot while holding Option-R, and when the system
-shows the recovery screen, open a terminal window and type in 
-
-csrutil disable
-
-and reboot. Re-enabling SIP goes the same way, but type in "csrutil enable"
-this time. I would not recommend to dis-able SIP permanently for security
-reasons.
-
 Alternatives
 ============
 
@@ -127,8 +150,6 @@ not require to disable SIP. Just search the internet for the key words
 loopback rogue amoeba
 
 and you will find a product which you can buy for about USD 100 (you
-can evaluate before you pay). I have
-not bought it and never tried it, but according to the advertisement
-it should be fine for routing audio between HPSDR applications to digimode
-programs, and it seems you get some other benefits such as a virtual
-audio patch-panel as well.
+can evaluate before you pay). I can tell that it works because I
+have bought it for use with my Apple M1 MacBookAir, where I have not even
+tried to use my own driver.
