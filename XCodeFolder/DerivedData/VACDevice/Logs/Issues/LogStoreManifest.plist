@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>8942EF44-CC98-4B77-9F70-0B048377806E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.target</string>
+			<key>fileName</key>
+			<string>8942EF44-CC98-4B77-9F70-0B048377806E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>VACDevice-bvxfcfrdotrjsxarlridhmctyalh</string>
+			<key>timeStartedRecording</key>
+			<real>649099650.85918403</real>
+			<key>timeStoppedRecording</key>
+			<real>649099651.43674695</real>
+			<key>title</key>
+			<string>Build target VACDevice</string>
+			<key>uniqueIdentifier</key>
+			<string>8942EF44-CC98-4B77-9F70-0B048377806E</string>
+		</dict>
+		<key>984F18B8-3AD1-4636-8E36-FA072CFB7961</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.target</string>
+			<key>fileName</key>
+			<string>984F18B8-3AD1-4636-8E36-FA072CFB7961.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>VACDevice-dgpxlxtggmwurnfjcnasfjloqaox</string>
+			<key>timeStartedRecording</key>
+			<real>649092253.94326198</real>
+			<key>timeStoppedRecording</key>
+			<real>649092254.33700597</real>
+			<key>title</key>
+			<string>Build target VACDevice</string>
+			<key>uniqueIdentifier</key>
+			<string>984F18B8-3AD1-4636-8E36-FA072CFB7961</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>16F26C2B-C22F-442C-B12C-1F64C9F86E24</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>16F26C2B-C22F-442C-B12C-1F64C9F86E24.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>VACDevice project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>VACDevice</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build VACDevice</string>
+			<key>timeStartedRecording</key>
+			<real>649099650.80594599</real>
+			<key>timeStoppedRecording</key>
+			<real>649099651.48377895</real>
+			<key>title</key>
+			<string>Build VACDevice</string>
+			<key>uniqueIdentifier</key>
+			<string>16F26C2B-C22F-442C-B12C-1F64C9F86E24</string>
+		</dict>
+		<key>6341F5EE-0ECD-42B0-856C-736E9E036834</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6341F5EE-0ECD-42B0-856C-736E9E036834.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>VACDevice project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>VACDevice</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build VACDevice</string>
+			<key>timeStartedRecording</key>
+			<real>649092465.971187</real>
+			<key>timeStoppedRecording</key>
+			<real>649092466.04539597</real>
+			<key>title</key>
+			<string>Build VACDevice</string>
+			<key>uniqueIdentifier</key>
+			<string>6341F5EE-0ECD-42B0-856C-736E9E036834</string>
+		</dict>
+		<key>A974AFCE-936F-4832-95BE-F1EFF6FE0A74</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A974AFCE-936F-4832-95BE-F1EFF6FE0A74.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>VACDevice project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>VACDevice</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Clean VACDevice</string>
+			<key>timeStartedRecording</key>
+			<real>649099540.65366304</real>
+			<key>timeStoppedRecording</key>
+			<real>649099540.69727004</real>
+			<key>title</key>
+			<string>Clean VACDevice</string>
+			<key>uniqueIdentifier</key>
+			<string>A974AFCE-936F-4832-95BE-F1EFF6FE0A74</string>
+		</dict>
+		<key>CF654CE7-1593-4FDA-9AA6-EA85E7FFB9B9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CF654CE7-1593-4FDA-9AA6-EA85E7FFB9B9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>VACDevice project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>VACDevice</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build VACDevice</string>
+			<key>timeStartedRecording</key>
+			<real>649099547.686028</real>
+			<key>timeStoppedRecording</key>
+			<real>649099547.76487303</real>
+			<key>title</key>
+			<string>Build VACDevice</string>
+			<key>uniqueIdentifier</key>
+			<string>CF654CE7-1593-4FDA-9AA6-EA85E7FFB9B9</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
